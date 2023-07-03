@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
-# from typing import List
+from typing import List
 
 def requirement_file(path:str)->List[str]:
     # This function will return list of requirements
     
-    requirement = []
+    requirements = []
     with open(path) as file_object:
         requirements = file_object.readlines()
         requirements = [package.replace("\n", "") for package in requirements]
